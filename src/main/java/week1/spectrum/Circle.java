@@ -1,4 +1,4 @@
-package week2.spectrum;
+package week1.spectrum;
 // Circle.java: The circle class that extends GeometricObject
 public class Circle extends GeometricObject {
   private double radius;

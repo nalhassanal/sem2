@@ -1,3 +1,4 @@
+package week2.spectrum;
 public class GenericBox<T>	{
 	private T item;
 	boolean full;

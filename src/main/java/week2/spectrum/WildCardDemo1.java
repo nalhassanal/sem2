@@ -1,3 +1,4 @@
+package week2.spectrum;
 import java.util.ArrayList;
 
 public class WildCardDemo1
@@ -11,7 +12,7 @@ public class WildCardDemo1
       System.out.println();
    }
 
-   public static void display(ArrayList<Number> list)   {
+   public static void display(ArrayList<?> list)   {
       for (int i=0; i<=2; i++)
          if ( list.get(i).equals(6.0) )
             System.out.println("yes");

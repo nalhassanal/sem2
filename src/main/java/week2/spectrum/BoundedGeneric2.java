@@ -1,3 +1,4 @@
+package week2.spectrum;
 public class BoundedGeneric2<T extends Number> {
    T data;
    public BoundedGeneric2(T t) {

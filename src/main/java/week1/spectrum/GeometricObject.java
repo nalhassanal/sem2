@@ -1,4 +1,4 @@
-package week2.spectrum;
+package week1.spectrum;
 public abstract class GeometricObject {
   private String color = "white";
   private boolean filled;

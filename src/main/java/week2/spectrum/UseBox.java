@@ -1,3 +1,5 @@
+package week2.spectrum;
+
 public class UseBox	{
 
 	public static void main(String args[])	{

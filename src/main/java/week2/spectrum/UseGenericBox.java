@@ -1,3 +1,4 @@
+package week2.spectrum;
 public class UseGenericBox	{
 
 	public static void main(String args[])	{

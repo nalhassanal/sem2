@@ -1,3 +1,4 @@
+package week2.spectrum;
 public class Box {
 	private Comparable item;
 	boolean full;

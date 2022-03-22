@@ -1,3 +1,4 @@
+package week2.spectrum;
 import java.util.ArrayList;
 
 public class WildCardDemo2
