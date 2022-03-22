@@ -1,4 +1,4 @@
-package week2;
+package week2.Lecture;
 
 public class BoundedGeneric2 <T extends Number>{
     T data;

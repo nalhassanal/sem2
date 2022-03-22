@@ -1,4 +1,4 @@
-package week2;
+package week2.Lecture;
 
 
 // Circle.java: The circle class that extends GeometricObject

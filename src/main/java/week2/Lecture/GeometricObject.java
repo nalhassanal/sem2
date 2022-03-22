@@ -1,4 +1,4 @@
-package week2;
+package week2.Lecture;
 
 public abstract class GeometricObject {
     private String color = "white";

@@ -1,4 +1,4 @@
-package week2;
+package week2.Lecture;
 
 public class GenericBox<T> {
     private T item;

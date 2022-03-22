@@ -1,4 +1,4 @@
-package week2;
+package week2.Lecture;
 
 import java.util.ArrayList;
 
