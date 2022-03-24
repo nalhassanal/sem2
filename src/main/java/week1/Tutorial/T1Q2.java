@@ -12,6 +12,7 @@ public class T1Q2 {
             this("(2) Invoke Employee's overloaded constructor");
             System.out.println("(3) Performs Employee's tasks");
         }
+
         public Employee(String s){
             System.out.println(s);
         }
@@ -23,7 +24,9 @@ public class T1Q2 {
         }
 
         public static void main(String[] args) {
-            new Faculty();
+            new Employee();
+            System.out.println();
+//            new Faculty();
         }
     }
 }

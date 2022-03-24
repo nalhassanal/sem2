@@ -24,11 +24,12 @@ public class T1Q1 {
     public static class Telephone{
         private int number;
         private int areaCode;
-        static int numberOfTelephoneObject;
+        static int numberOfTelephoneObject = 0;
 
         public Telephone (int code, int number){
             this.areaCode = code;
             this.number = number;
+            numberOfTelephoneObject++;
         }
 
         public void setAreaCode(int code){
@@ -48,16 +49,15 @@ public class T1Q1 {
         }
 
         public String makeFullNumber(){
-            String ret = "0" + areaCode + "-" + number;
-            return ret;
+            return "0" + areaCode + "-" + number;
         }
     }
 
     public static void main(String[] args) {
-        Telephone [] Telephone_obj = new Telephone[5];
+        Telephone [] Telephone_obj = new Telephone[5]; // jadikan array
 
         for ( int i = 0 ; i < Telephone_obj.length; i++){
-            Telephone_obj[i]= new Telephone(03,79676300+i);
+            Telephone_obj[i]= new Telephone(03,79676300+i); // constructor
             System.out.println(Telephone_obj[i].makeFullNumber());
         }
     }

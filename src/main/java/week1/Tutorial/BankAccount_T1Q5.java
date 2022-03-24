@@ -15,11 +15,17 @@ Assume the existence of an interface, Account, with the following methods:
       to the balance and if so, decreases the balance by the value of the parameter and returns true;
       otherwise, it leaves the balance unchanged and returns false
      */
+
+    interface Account_T1Q5{
+        public int deposit(int amount);
+        public boolean withdraw(int amount);
+    }
+
 public class BankAccount_T1Q5 implements Account_T1Q5{
     private int balance;
 
-    public BankAccount_T1Q5(int balance){
-        this.balance = balance;
+    public BankAccount_T1Q5(int balances){
+        balance = balances;
     }
 
     public int getBalance(){
@@ -29,7 +35,7 @@ public class BankAccount_T1Q5 implements Account_T1Q5{
     @Override
     public int deposit(int amount) {
         this.balance += amount;
-        return balance;
+        return this.balance;
     }
 
     @Override

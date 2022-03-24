@@ -48,7 +48,7 @@ public abstract class Vehicle_T1Q4 {
 //                vehicle_obj.currentSpeed++;
 //            }
 //        }
-//        vehicle_obj = new
-        // cannot create an instance of Vehicle
+//        vehicle_obj = new Vehicle_T1Q4();
+//         cannot create an instance of Vehicle
     }
 }
