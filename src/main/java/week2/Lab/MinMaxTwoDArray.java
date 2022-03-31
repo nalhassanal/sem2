@@ -10,6 +10,15 @@ public class MinMaxTwoDArray {
                     min = list[i][j];
             }
         }
+
+        // for each for 2d array
+        for (E[] arr : list){
+            for (E element : arr){
+                if ( element.compareTo(min) < 0)
+                    min = element;
+            }
+        }
+
         return min;
     }
 

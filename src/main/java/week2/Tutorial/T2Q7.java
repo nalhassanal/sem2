@@ -10,5 +10,13 @@ import java.util.ArrayList;
     which accepts two ArrayList parameters using the wildcards.
  */
 public class T2Q7 {
-//    public static void allTransportation (ArrayList<?> a, ArrayList<?> b)
+    public static void main(String[] args) {
+        ArrayList <String> vehicle = new ArrayList<>();
+        ArrayList <Object> transportation= new ArrayList<>();
+
+        allTransportation(vehicle, transportation);
+    }
+    public static <E> void allTransportation (ArrayList<?> a, ArrayList<?> b){
+
+    }
 }

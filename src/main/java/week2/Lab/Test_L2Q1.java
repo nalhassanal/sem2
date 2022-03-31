@@ -20,6 +20,6 @@ public class Test_L2Q1 {
         System.out.println(c.equals(b));
         System.out.println(a.compareTo(b));
         System.out.println(a.compareTo(c));
-        System.out.println(c.compareTo(b));
+        System.out.println(b.compareTo(c));
     }
 }

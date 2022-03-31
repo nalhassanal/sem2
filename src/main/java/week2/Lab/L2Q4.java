@@ -18,6 +18,18 @@ minmax() method returns “Min = blue Max = tan” for strArray
 public class L2Q4 {
     public static <T extends Comparable <T> > String minmax(T[] arr){
         T Min = arr[0], Max = arr[0];
+//        // for each loop
+//        // left is each element in right side
+//        // basically loop through each element in array
+//        for (T element : arr){
+//            if (element.compareTo(Min) < 0){
+//                Min = element;
+//            }
+//            if (element.compareTo(Max) > 0){
+//                Max = element;
+//            }
+//        }
+
         for (int i = 0 ; i < arr.length; i++){
             if (arr[i].compareTo(Min) < 0 )
                 Min = arr[i];

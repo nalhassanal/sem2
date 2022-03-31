@@ -1,5 +1,7 @@
 package week2.Lab;
 
+// use T extends Comparable<T> because we want T to also have Comparable attributes so we want to implement
+// but for T cannot use implements, so we use extends
 public class StorePairGeneric <T extends Comparable <T> > implements Comparable <StorePairGeneric <T> >{
     private T first, second;
 
@@ -29,11 +31,11 @@ public class StorePairGeneric <T extends Comparable <T> > implements Comparable 
     @Override
     public boolean equals (Object o){
         StorePairGeneric <T> another = (StorePairGeneric<T>) o;
-        return (first == another.getFirst());
+        return first.equals(another.getFirst());
     }
 
     @Override
     public int compareTo(StorePairGeneric<T> o) {
-        return 0;
+        return first.compareTo(o.first);
     }
 }

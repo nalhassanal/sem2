@@ -6,7 +6,7 @@ package week2.Tutorial;
  */
 public class T2Q6 {
     public static void main(String[] args) {
-        T2Q5.Duo <String , Integer> sideShape = new T2Q5.Duo<>();
-        T2Q5.Duo <Double, Double> points = new T2Q5.Duo<>();
+        T2Q5.Duo <String , Integer> sideShape = new T2Q5.Duo<>("Square", 4);
+        T2Q5.Duo <Double, Double> points = new T2Q5.Duo<>(6.9,4.2);
     }
 }
