@@ -14,7 +14,7 @@ public abstract class MyAbstractList<E> implements MyList<E> {
 
   @Override /** Add a new element at the end of this list */
   public void add(E e) {
-    add(size, e);
+    add(size, e); // abstract method
   }
 
   @Override /** Return true if this list contains no elements */

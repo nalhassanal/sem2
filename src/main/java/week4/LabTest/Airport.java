@@ -64,7 +64,7 @@ public class Airport {
     }
 
 
-    public static <T> String max(T obj, T obj1, T obj2){
+    public static <T> String max(T obj, T obj1, T obj2){ // maybe use int better
         String max = (String) ((Item<?, ?>) obj).getPrice();
         String val1 = (String) ((Item<?, ?>) obj1).getPrice();
         String val2= (String) ((Item<?, ?>) obj2).getPrice();
