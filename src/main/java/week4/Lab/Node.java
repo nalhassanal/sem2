@@ -1,15 +1,15 @@
-package week4.Tutorial;
+package week4.Lab;
 
 public class Node <E>{
     E element;
-    Node <E> next;
+    Node<E> next;
 
     public Node (){
 
     }
 
-    public Node (E element){
+    public Node (E element) {
         this.element = element;
+        next = null;
     }
-
 }
