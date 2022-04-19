@@ -13,6 +13,10 @@ public class DoublyLinkedList <E>{
         tail = null;
     }
 
+    public boolean isEmpty(){
+        return size == 0;
+    }
+
     public int getSize() {
         return size;
     }
@@ -22,6 +26,7 @@ public class DoublyLinkedList <E>{
         if (head != null){
             head.prev = toBeAdded;
         }
+        head = toBeAdded;
         if (tail == null){
             tail = toBeAdded;
         }
@@ -34,6 +39,7 @@ public class DoublyLinkedList <E>{
         if (tail != null){
             tail.next = toBeAdded;
         }
+        tail = toBeAdded;
         if (head == null){
             head = toBeAdded;
         }
@@ -124,7 +130,6 @@ public class DoublyLinkedList <E>{
             current.prev = null;
             size--;
         }
-        System.out.println("Deleted : " + element);
         return element;
     }
 
@@ -137,6 +142,7 @@ public class DoublyLinkedList <E>{
         }
         current = null;
         tail.prev = tail.next = null;
+        System.out.println("Successfully cleared " +size+" node (s)");
         size = 0;
     }
 }

@@ -8,10 +8,14 @@ public class testDoublyLinkedList {
         list.addLast(100);
         list.add(2,2);
         list.remove(3);
+        System.out.println();
+
         list.iterateForward();
         list.iterateBackward();
-        System.out.println(list.getSize());
+        System.out.println("Size of current Doubly Linked List :"+list.getSize());
         list.clear();
-        System.out.println(list.getSize());
+
+        System.out.println();
+        System.out.println("Size of current Doubly Linked List :"+list.getSize());
     }
 }

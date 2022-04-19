@@ -47,10 +47,14 @@ public class DoublyLinkedList<E> {
         //create object tmp and set pointer of the new node
         Node<E> tmp = new Node(element, head, null);
         //set head.prev of current head to be linked to the new node
-        if(head != null ) {head.prev = tmp;}
+        if(head != null ) {
+            head.prev = tmp;
+        }
         head = tmp; //now tmp become head
         //if no tail, then tmp set to be a tail
-        if(tail == null) { tail = tmp;}
+        if(tail == null) {
+            tail = tmp;
+        }
         size++;//increase number of node
         System.out.println("adding: "+element);
     }
@@ -59,11 +63,15 @@ public class DoublyLinkedList<E> {
         //create object tmp and set pointer of the previous node
         Node<E> tmp = new Node(element, null, tail);
         //set tail.next point to object tmp
-        if(tail != null) {tail.next = tmp;}
+        if(tail != null) {
+            tail.next = tmp;
+        }
         //now tmp become tail
         tail = tmp;
         //if no head, then tmp set to be a head
-        if(head == null) { head = tmp;}
+        if(head == null) {
+            head = tmp;
+        }
         size++;//increase number of node
         System.out.println("adding: "+element);
     }
