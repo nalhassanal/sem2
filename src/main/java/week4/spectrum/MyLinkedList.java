@@ -58,7 +58,8 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
   }
 
 
-  @Override /** Add a new element at the specified index 
+  @Override /**
+   a new element at the specified index
    * in this list. The index of the head element is 0 */
   public void add(int index, E e) {
     if (index == 0) {
