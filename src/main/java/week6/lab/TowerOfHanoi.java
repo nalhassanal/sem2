@@ -14,9 +14,9 @@ ii. Each move consists of taking the upper disk from one of the rods
     may already be present on that rods
 iii.No disk may be placed on top of a smaller disk.
  */
+//    public static Stack<Integer> [] towerx = new Stack[4];X
 import java.util.Stack;
 public class TowerOfHanoi {
-//    public static Stack<Integer> [] towerx = new Stack[4];
     public static MyStack<Integer>[] tower = new MyStack[4];
     public static int N;
 
@@ -24,7 +24,7 @@ public class TowerOfHanoi {
         for (int i = 1; i < 4; i++) {
             tower[i] = new MyStack<>();
         }
-        int num = 2;
+        int num = 3;
         N = num;
         toh(num);
     }
