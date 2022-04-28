@@ -7,7 +7,7 @@ element in S.
 public class L6Q3 {
     public static void main(String[] args) {
         MyStack<Integer> s = new MyStack<>();
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 5; i++) {
             s.push(i);
         }
 
