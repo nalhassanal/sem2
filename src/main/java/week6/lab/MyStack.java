@@ -50,4 +50,9 @@ public class MyStack <E>{
             throw new ArrayIndexOutOfBoundsException(index);
         return list.get(index);
     }
+
+    // for toh problem
+    public ArrayList<E> elements(){
+        return list;
+    }
 }

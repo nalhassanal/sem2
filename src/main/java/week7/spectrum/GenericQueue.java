@@ -14,6 +14,17 @@ public class GenericQueue<E> {
     return list.size();
   }
 
+  public E front() {
+    return list.get(0);   
+  }
+  
+  public E back(){
+      return list.get(getSize()- 1);
+  }
+  
+  public boolean isEmpty(){
+      return list.isEmpty();
+  }
   @Override
   public String toString() {
     return "Queue: " + list.toString();

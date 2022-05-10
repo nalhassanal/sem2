@@ -27,6 +27,7 @@ public class TowerOfHanoi {
         int num = 3;
         N = num;
         toh(num);
+
     }
 
     public static void toh(int n){

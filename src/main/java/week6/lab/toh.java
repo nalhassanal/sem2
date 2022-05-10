@@ -12,12 +12,12 @@ src - > dest
  */
 public class toh {
     public static Stack<Integer> [] stacks = new Stack[4];
-
+    public static int N;
     public static void main(String[] args) {
         for (int i = 1; i < 4; i++) {
             stacks[i] = new Stack<>();
         }
-        int numOfDisks = 3;
+        int numOfDisks = N = 3;
 
         // first in is the largest disks
         for (int i = numOfDisks; i > 0; i--) {
@@ -45,5 +45,9 @@ public class toh {
         // moves the lone disk from source to the destination
         stacks[destination].push(stacks[source].pop());
         moveDisks(numOfDisks - 1, middle, source, destination); // this is the restart
+    }
+
+    public static void display(){
+
     }
 }
