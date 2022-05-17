@@ -1,5 +1,6 @@
 package week7.lab;
 import java.util.LinkedList;
+
 public class MyQueue <E>{
     private LinkedList<E> list = new LinkedList<>();
 
@@ -15,6 +16,7 @@ public class MyQueue <E>{
     }
 
     public E dequeue(){
+        if (list.isEmpty()) return null;
         return list.removeFirst();
     }
 

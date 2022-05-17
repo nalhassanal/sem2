@@ -24,6 +24,15 @@ public class T7Q4 {
         X.enqueue(new Integer(4));
         
         System.out.println(X.front());
-        
+
+        Y = X.dequeue();
+        X.enqueue (new Integer (10));
+        System.out.println(X.front());
+
+        Y = X.dequeue();
+        System.out.println(Y);
+
+        System.out.println(X.front());
+
     }
 }
