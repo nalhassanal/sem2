@@ -1,4 +1,4 @@
-package pastyear;
+package week9.pastyear.pastyear;
 // add commentss
 public class PastyearTest {
     public static void main(String[] args) {

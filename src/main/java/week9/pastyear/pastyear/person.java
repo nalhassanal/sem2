@@ -1,4 +1,4 @@
-package pastyear;
+package week9.pastyear.pastyear;
 
 public class person {
     private String name, occupation, frontliner_status = "Not frontliner";
