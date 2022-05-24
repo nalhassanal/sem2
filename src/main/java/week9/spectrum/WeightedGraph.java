@@ -119,7 +119,7 @@ class WeightedGraph<T extends Comparable<T>, N extends Comparable <N>> {
       return temp.vertexInfo;
    }
 
-   public boolean addEdge(T source, T destination, N w)   {
+   public boolean addEdge(T source, T destination, N weight)   {
       if (head==null)
          return false;
       if (!hasVertex(source) || !hasVertex(destination)) 
@@ -133,7 +133,7 @@ class WeightedGraph<T extends Comparable<T>, N extends Comparable <N>> {
                if ( destinationVertex.vertexInfo.compareTo( destination ) == 0 )   {
                   // Reached destination vertex, add edge here
                   Edge<T,N> currentEdge = sourceVertex.firstEdge;
-                  Edge<T,N> newEdge = new Edge<>(destinationVertex, w, currentEdge);
+                  Edge<T,N> newEdge = new Edge<>(destinationVertex, weight, currentEdge);
                   sourceVertex.firstEdge=newEdge;
                   sourceVertex.outdeg++;
                   destinationVertex.indeg++;

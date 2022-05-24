@@ -26,8 +26,11 @@ public class AdjMatrixGraph {
     }
 
     public static void main(String[] args) {
-        AdjMatrixGraph amg = new AdjMatrixGraph(2);
+        AdjMatrixGraph amg = new AdjMatrixGraph(5);
         amg.addEdge(1, 0);
+        amg.addEdge(0, 4);
+        amg.addEdge(3, 2);
+
         amg.printGraph();
     }
 }
