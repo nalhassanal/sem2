@@ -208,8 +208,41 @@ public class WeightedGraph<T extends Comparable<T>, N extends Comparable<N>>{
         return addEdge(src, dst, weight) && addEdge(dst, src, weight);
     }
 
-    public edge<T, N> removeEdge(T src, T dst){
-        if (!hasEdge(src, dst))
+    public boolean removeEdge(T src, T dst){
+        if (!hasEdge(src, dst)) return false;
+        vertex<T, N> source = head;
+        while (source != null){
+            if (source.vertexObject.compareTo(src) == 0){
+                edge<T, N> currentEdge = source.firstEdge;
+                if (currentEdge.destination.vertexObject.compareTo(dst) == 0){
+                    source.firstEdge = currentEdge.nextEdge;
+                    currentEdge.nextEdge = null;
+                    source.outdeg--;
+                    currentEdge.destination.indeg--;
+                    return true;
+                }
+                else {
+                    edge<T, N> prevEdge = currentEdge; // keep prev edge pointer
+                    while (currentEdge != null){
+                        if (currentEdge.destination.vertexObject.compareTo(dst) == 0){ // if the dst of the edge is equal to dst iven
+                            prevEdge.nextEdge = currentEdge.nextEdge; // exchange the pos of back to front
+                            currentEdge.nextEdge = null;
+                            source.outdeg--; // decrement the outdeg of the source vertex
+                            currentEdge.destination.indeg--; // decrement the indeg of the dst vertex
+                            return true; // returns the removed edge
+                        }
+                        prevEdge = currentEdge; // updates the prev edge pointer
+                        currentEdge = currentEdge.nextEdge; // updates the cur edge pointer to the next edge
+                    }
+                }
+            }
+            source = source.nextVertex;
+        }
+        return false;
+    }
+
+//    public edge<T, N> removeEdge(T src, T dst){
+ /*       if (!hasEdge(src, dst))
             return null; // returns null if there is no edge between src and dst
         vertex<T, N> source = head; // keep track of graph
         while (source != null){
@@ -245,6 +278,7 @@ public class WeightedGraph<T extends Comparable<T>, N extends Comparable<N>>{
         // returns null if method exits the loop
         return null;
     }
+ */
 
     public N getEdgeWeight (T src, T dst){
         if (head == null)

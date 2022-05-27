@@ -35,7 +35,7 @@ public class testWeighted {
         System.out.println("\nPrint Edges : " );
         graph1.printEdges();
 
-        System.out.println("delete edge Kuching - Tawau: " + graph1.removeEdge("Kuching" , "Tawau"));
+        System.out.println("delete edge Kuching - Melaka: " + graph1.removeEdge("Kuching" , "Melaka"));
 
         System.out.println("has edge from Kuching to Melaka?  " + graph1.hasEdge("Kuching", "Melaka") );
         System.out.println("has edge from Melaka to Langkawi?  " + graph1.hasEdge("Melaka", "Kuching") );
