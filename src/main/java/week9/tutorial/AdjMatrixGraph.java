@@ -1,8 +1,8 @@
 package week9.tutorial;
 
 public class AdjMatrixGraph {
-    private int vertices;
-    private int [][] matrix;
+    private final int vertices;
+    private final int [][] matrix;
 
     public AdjMatrixGraph(int vertices){
         this.vertices = vertices;
