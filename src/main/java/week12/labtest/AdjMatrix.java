@@ -17,24 +17,23 @@ public class AdjMatrix {
 
     public void addEdge(String source, String destination){
         matrix[vertices.indexOf(source)][vertices.indexOf(destination)] = 1;
-        matrix[vertices.indexOf(destination)][vertices.indexOf(source)] = 1;
-        matrix[vertices.indexOf(source)][vertices.indexOf(source)] = 1;
-        matrix[vertices.indexOf(destination)][vertices.indexOf(destination)] = 1;
+    }
 
+    public ArrayList<String> getVertices(){
+        return vertices;
+    }
+
+    public int[][] getMatrix(){
+        return matrix;
     }
 
     public void printGraph(){
-        System.out.print("\t\t\t");
-        for(String vertex: vertices){
-            System.out.print(vertex + "|");
-        }
-        System.out.println();
         for(int i = 0; i < vertices.size(); i++){
             System.out.printf("%-15s | ", vertices.get(i));
             for (int j = 0; j < vertices.size(); j++) {
-                System.out.print(matrix[i][j] + " | ");
+                System.out.print(matrix[i][j] + " ");
             }
-            System.out.println();
+            System.out.println("| ");
         }
     }
 

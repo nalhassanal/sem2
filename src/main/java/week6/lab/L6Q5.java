@@ -43,8 +43,8 @@ public class L6Q5 {
             // i represent tower
             // go by tower
             for (int i = 1; i < 4; i++) {
-                if (layer < arrayList.get(i).size()){
-                    System.out.printf(" %s  ", arrayList.get(i).get(layer));
+                if (layer < arrayList.get(i - 1).size()){
+                    System.out.printf(" %s  ", arrayList.get(i - 1).get(layer));
                 }
                 else
                     System.out.print("    ");

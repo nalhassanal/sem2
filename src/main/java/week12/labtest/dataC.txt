@@ -1,0 +1,10 @@
+Ayer Keroh	    0	1	1	0	0	0	1	0	0	0
+Bentong	        1	0	0	0	0	1	0	0	0	1
+Chukai	        1	1	0	0	0	1	1	0	0	0
+Dungun	        0	0	0	0	0	0	0	0	0	0
+Endau	        0	1	0	0	0	1	0	0	1	0
+Gerik	        0	1	1	0	0	0	0	0	0	0
+Hulu Yam	    0	0	0	0	0	0	0	0	0	0
+Iskandar Puteri	0	0	1	0	0	1	1	0	1	0
+Jitra	        1	0	0	0	0	0	1	0	0	0
+Kajang	        0	0	0	0	0	1	0	0	1	0

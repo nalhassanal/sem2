@@ -1,6 +1,8 @@
 package week12.labtest;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class WeightedGraph<T extends Comparable<T>, N extends Comparable<N>>{
     protected vertex<T, N> head;
@@ -241,45 +243,6 @@ public class WeightedGraph<T extends Comparable<T>, N extends Comparable<N>>{
         return false;
     }
 
-//    public edge<T, N> removeEdge(T src, T dst){
- /*       if (!hasEdge(src, dst))
-            return null; // returns null if there is no edge between src and dst
-        vertex<T, N> source = head; // keep track of graph
-        while (source != null){
-            // traverse the whole graph
-            if (source.vertexObject.compareTo(src) == 0){
-                edge<T, N> currentEdge = source.firstEdge;
-                if (currentEdge.destination.vertexObject.compareTo(dst) == 0){ // if first edge dst is equal to dst given
-                    edge<T, N> retEdge = source.firstEdge; // temp for removed edge
-                    source.firstEdge = currentEdge.nextEdge; // exchange pos of first and second edge or whtv number but front and back
-                    currentEdge.nextEdge = null;
-                    source.outdeg--; // decrement the outdeg of the source vertex
-                    currentEdge.destination.indeg--; // decrement the indeg of dst vertex
-                    return retEdge; // returns the removed edge | no more link between src and dst
-                }
-                else {
-                    edge<T, N> prevEdge = currentEdge; // keep prev edge pointer
-                    while (currentEdge != null){
-                        if (currentEdge.destination.vertexObject.compareTo(dst) == 0){ // if the dst of the edge is equal to dst iven
-                            edge<T, N> retEdge = prevEdge.nextEdge; // temp for removed edge
-                            prevEdge.nextEdge = currentEdge.nextEdge; // exchange the pos of back to front
-                            currentEdge.nextEdge = null;
-                            source.outdeg--; // decrement the outdeg of the source vertex
-                            currentEdge.destination.indeg--; // decrement the indeg of the dst vertex
-                            return retEdge; // returns the removed edge
-                        }
-                        prevEdge = currentEdge; // updates the prev edge pointer
-                        currentEdge = currentEdge.nextEdge; // updates the cur edge pointer to the next edge
-                    }
-                }
-            }
-            source = source.nextVertex; // update the source vertex
-        }
-        // returns null if method exits the loop
-        return null;
-    }
- */
-
     public N getEdgeWeight (T src, T dst){
         if (head == null)
             return null;
@@ -354,7 +317,32 @@ public class WeightedGraph<T extends Comparable<T>, N extends Comparable<N>>{
         System.out.println();
     }
 
-    public void dfs(T root){
+    public void bfs(T root) {
+        System.out.println("At city / town " + root + " : ");
+        ArrayList<T> related = getNeighbours(root);
+        System.out.println("Can go to : " + related);
+
+        boolean [] visited = new boolean[size];
+        Queue<T> q = new LinkedList<>();
+        q.offer(root);
+        visited[getIndex(root)] = true;
+        while (!q.isEmpty()){
+            T next = q.poll();
+
+            ArrayList<T> relatedNext = getNeighbours(next);
+            if (relatedNext == null)
+                break;
+
+            for (T element : relatedNext){
+                if (!visited[getIndex(element)]) {
+                    visited[getIndex(element)] = true;
+                    q.offer(element);
+                }
+            }
+            System.out.println("Queue: " + q);
+        }
+
 
     }
+
 }
